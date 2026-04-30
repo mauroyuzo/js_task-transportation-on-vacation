@@ -3,13 +3,14 @@ function calculateRentalCost(days) {
   const SHORT_TERM = 3;
   const SHORT_PRICE = 20;
   const LONG_PRICE = 50;
+  const DAYLY_PRICE = 40;
 
   if (days >= LONG_TERM) {
-    return days * 40 - LONG_PRICE;
+    return days * DAYLY_PRICE - LONG_PRICE;
   } else if (days >= SHORT_TERM) {
-    return days * 40 - SHORT_PRICE;
+    return days * DAYLY_PRICE - SHORT_PRICE;
   } else {
-    return days * 40;
+    return days * DAYLY_PRICE;
   }
 }
 
